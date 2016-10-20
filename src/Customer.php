@@ -1,12 +1,11 @@
 <?php
 
-class Customer
+use Illuminate\Database\Eloquent\Model as Eloquent;
+
+class Customer extends Eloquent
 {
-    public $type;
-
-    public function __construct($type)
-    {
-        $this->type = $type;
-    }
-
+    public $fillable = [
+        'name',
+        'type',
+    ];
 }
